@@ -17,9 +17,12 @@
   },
   "main": "ventage.js",
   "scripts": {
-    "pretest": "./node_modules/.bin/jshint ./ventage.js ./test/*.js",
-    "test": "./node_modules/.bin/mocha --ui tdd ./test"
+    "pretest": "jshint ./ventage.js ./test/*.js",
+    "test": "mocha --ui tdd ./test"
   },
+  "precommit": [
+      "test"
+  ],
   "bugs": {
     "url": "https://github.com/nicholascloud/ventage/issues"
   },
